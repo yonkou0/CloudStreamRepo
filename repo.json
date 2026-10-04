@@ -1,0 +1,9 @@
+{
+    "name":  "CloudStreamRepo",
+    "description":  "Combined stable CloudStream providers - 30 source-built extensions plus 6 imported Desi extensions",
+    "manifestVersion":  1,
+    "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
+    "pluginLists":  [
+                        "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/plugins.json"
+                    ]
+}
