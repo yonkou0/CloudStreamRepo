@@ -1,793 +1,793 @@
 [
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniChan.cs3",
-        "status":  1,
-        "version":  14,
-        "name":  "AniChan",
-        "internalName":  "AniChan",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Watch Anime in HD with Sub, Dub and Hardsub",
-        "fileSize":  76097,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie"
-                    ],
-        "iconUrl":  "https://www.google.com/s2/favicons?domain=anichan.net\u0026sz=%size%",
-        "apiVersion":  1,
-        "fileHash":  "sha256-35b2164269b1f2b2afaa0437bdca2167c40ba9f7b671e1dab933a77055080b43"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Anidap.cs3",
-        "status":  1,
-        "version":  17,
-        "name":  "Anidap",
-        "internalName":  "Anidap",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Anime with Sub, Dub \u0026 Hardsub from Anidap",
-        "fileSize":  79693,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://anikuro.ru/static/favicon/favicon-96x96.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-9efaa55e071e66bcafda161d52e85aafe8139ab383c3b739c676b79fbeec1e25"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniKotoAnime.cs3",
-        "status":  1,
-        "version":  17,
-        "name":  "AniKotoAnime",
-        "internalName":  "AniKotoAnime",
-        "authors":  [
-                        "KSHITIJ8473"
-                    ],
-        "description":  "AniKoto Anime - Watch Anime Sub \u0026 Dub in HD",
-        "fileSize":  57631,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://anikototv.to/AnikotoTheme/assets/images/favicon.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-6a5d5bf3eb490a27e1c65737389f3e3a2542abbea1f2f65877e3630ddf67521d"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AnimeInWeb.cs3",
-        "status":  1,
-        "version":  4,
-        "name":  "AnimeInWeb",
-        "internalName":  "AnimeInWeb",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Anime sub indo from AnimeInWeb with multiple qualities",
-        "fileSize":  65969,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "id",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA",
-                        "TvSeries"
-                    ],
-        "iconUrl":  "https://animeinweb.com/favicon.ico",
-        "apiVersion":  1,
-        "fileHash":  "sha256-9004f282854506daf658a23ddd367707f05eaee1f3b67f529300778d8726a287"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AnimeWorldIndia.cs3",
-        "status":  1,
-        "version":  8,
-        "name":  "AnimeWorldIndia",
-        "internalName":  "AnimeWorldIndia",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Anime World India - Hindi, Tamil, Telugu Anime \u0026 Cartoons with multi-audio",
-        "fileSize":  61765,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "hi",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "Cartoon"
-                    ],
-        "iconUrl":  "https://watchanimeworld.top/wp-content/uploads/AW_Smiley.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-83adbc15684ee6bc3225585b8c9cf0772b813bf8d4cfce648d86603636b17507"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Animo.cs3",
-        "status":  1,
-        "version":  6,
-        "name":  "Animo",
-        "internalName":  "Animo",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Anime(sub,dub)",
-        "fileSize":  51023,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://4animo.xyz/logo.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-7ab91b533fdcb50761f1bd8bd31a315965eba00da830d51d2ffec94775f915a7"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniPM.cs3",
-        "status":  1,
-        "version":  4,
-        "name":  "AniPM",
-        "internalName":  "AniPM",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Anime with Sub \u0026 Dub from ani.pm",
-        "fileSize":  77495,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://www.google.com/s2/favicons?domain=ani.pm\u0026sz=64",
-        "apiVersion":  1,
-        "fileHash":  "sha256-086584257908d19c49c212cad427c51a06a5c901b9255787ad278873030e46aa"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniStream.cs3",
-        "status":  1,
-        "version":  1,
-        "name":  "AniStream",
-        "internalName":  "AniStream",
-        "authors":  [
-                        "Faisal"
-                    ],
-        "description":  "Watch anime in HD with English Sub and Dub from AniStream",
-        "fileSize":  30420,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie"
-                    ],
-        "iconUrl":  "https://anistream.one/og.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-22bf1e1c6ac3e027569a731201d06846affae653324e4893e9a504125f2d4595"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniSuge.cs3",
-        "status":  1,
-        "version":  6,
-        "name":  "AniSuge",
-        "internalName":  "AniSuge",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Anime from AniSuge with Sub and Dub support",
-        "fileSize":  71543,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://anisuge.tv/assets/images/favicon.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-53b5f96901ab08afefb3340f3278bbfad0989ecc4162b054ea7b449fbdff7df4"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniWaves.cs3",
-        "status":  1,
-        "version":  7,
-        "name":  "AniWaves",
-        "internalName":  "AniWaves",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "720p sub and dub anime",
-        "fileSize":  64493,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://aniwaves.ru/assets/images/aniwave.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-3915561a3afb9a0cecc600d440bb23fa2b190acac954c23c2de9dfde77a13d68"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Ctg Stream.cs3",
-        "status":  1,
-        "version":  2,
-        "name":  "Ctg Stream",
-        "internalName":  "Ctg Stream",
-        "authors":  [
-                        "Faisal"
-                    ],
-        "description":  "multi Language Provider",
-        "fileSize":  21713,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "TvSeries",
-                        "Movie",
-                        "AsianDrama",
-                        "Anime",
-                        "Torrent"
-                    ],
-        "apiVersion":  1,
-        "fileHash":  "sha256-4f792078033a2a31eb30a61053a454f924455071162d6881efca64652bd7cbef"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/DamiTVProvider.cs3",
-        "status":  1,
-        "version":  25,
-        "name":  "DamiTVProvider",
-        "internalName":  "DamiTVProvider",
-        "authors":  [
-                        "KSHITIJ8473"
-                    ],
-        "description":  "Live sports HIGH QAULITY",
-        "fileSize":  62025,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Live"
-                    ],
-        "iconUrl":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAvvc01IqbjrBZ-AhXwvyrIblnaJBA04IUNKmJNRbqEh46fWVItaGuoRsj\u0026s=10",
-        "apiVersion":  1,
-        "fileHash":  "sha256-bcbd165dd27e764cfd382a4c84379e47e7d83744b498bbe342eb4cca0ca520d5"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/GoTaku.cs3",
-        "status":  1,
-        "version":  4,
-        "name":  "GoTaku",
-        "internalName":  "GoTaku",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Hardsub and dub from Gotaku",
-        "fileSize":  64360,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://gotaku.to/images/icons/logo.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-e9ca8cc26c114d0bf827e212c722d564e24d8b34fe0bb764b27b51296a4a6dcb"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/JustPlay.cs3",
-        "status":  1,
-        "version":  6,
-        "name":  "JustPlay",
-        "internalName":  "JustPlay",
-        "authors":  [
-                        "KSHITIJ8473"
-                    ],
-        "description":  "Movies and series from multiple sources",
-        "fileSize":  272642,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Movie",
-                        "TvSeries"
-                    ],
-        "iconUrl":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSknDTJSN2AhrHzfxF75gr9-qG4x-JzwHRnvPDjZP2aa-93KRaXPF1_ZQdm\u0026s=10",
-        "apiVersion":  1,
-        "fileHash":  "sha256-010dfb5de36119e8016ffdd025977e4bbc29a6f7bd13bdecaa5fc62dac9e646d"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Kdesa.cs3",
-        "status":  1,
-        "version":  3,
-        "name":  "Kdesa",
-        "internalName":  "Kdesa",
-        "authors":  [
-                        "KSHITIJ8473"
-                    ],
-        "description":  "KDesa - Movies, TV Shows \u0026 Anime Multi-source,Multi-audio",
-        "fileSize":  152591,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Movie",
-                        "TvSeries",
-                        "Anime"
-                    ],
-        "iconUrl":  "https://kdesa.stream/android-chrome-192x192.png?v=6",
-        "apiVersion":  1,
-        "fileHash":  "sha256-af0c32c46f27c1e72b2c964929ee99fcca18efefecbf66a393dc11dc1441ae1e"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/LIVETVProvider.cs3",
-        "status":  1,
-        "version":  37,
-        "name":  "LIVETVProvider",
-        "internalName":  "LIVETVProvider",
-        "authors":  [
-                        "raghav,cnc"
-                    ],
-        "description":  "Watch LIVE TV channels \u0026 sports via LIVE TV",
-        "fileSize":  93858,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Live"
-                    ],
-        "iconUrl":  "https://png.pngtree.com/png-vector/20191026/ourmid/pngtree-live-icon-design-template-vector-isolated-illustration-png-image_1874482.jpg",
-        "apiVersion":  1,
-        "fileHash":  "sha256-48e43264ec9034412668cc1cb70c6febb7c6e81ffecca60ee1c26f00f9299659"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Miruro.cs3",
-        "status":  1,
-        "version":  7,
-        "name":  "Miruro",
-        "internalName":  "Miruro",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "ANIME(SUB,DUB)-MULTI SOURCE",
-        "fileSize":  92237,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://repository-images.githubusercontent.com/567000493/281ea6b4-7159-4ac7-b5f1-34abf335c033",
-        "apiVersion":  1,
-        "fileHash":  "sha256-922a8c2d07bbe77d2a171ab8bbb676e8a9aa6baa4682bde83a3e0eedf25ee2cc"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/MovieBox.cs3",
-        "status":  1,
-        "version":  1,
-        "name":  "MovieBox",
-        "internalName":  "MovieBox",
-        "authors":  [
-                        "Faisal"
-                    ],
-        "description":  "MovieBox Native - Pure API Provider with Crypto Bypass",
-        "fileSize":  93567,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "hi",
-        "tvTypes":  [
-                        "Movie",
-                        "TvSeries",
-                        "Anime"
-                    ],
-        "iconUrl":  "https://www.google.com/s2/favicons?sz=128\u0026domain=movieboxpro.app",
-        "apiVersion":  1,
-        "fileHash":  "sha256-37a0dead3485029324f33313b4d6c7c332bc9f2aa43e6c1d5eef376c74d298f8"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Multimovies.cs3",
-        "status":  1,
-        "version":  7,
-        "name":  "Multimovies",
-        "internalName":  "Multimovies",
-        "authors":  [
-                        "raghav,phisher,csksy"
-                    ],
-        "description":  "Multimovies - Movies, TV Shows \u0026 Anime. All sources: Cineverse, GD Mirror, Vidout, Nxsha (multi-server) and more",
-        "fileSize":  120347,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Movie",
-                        "TvSeries",
-                        "Anime"
-                    ],
-        "iconUrl":  "https://multimovies.casa/wp-content/uploads/2024/01/cropped-CompressJPEG.online_512x512_image.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-25e5ec8b40620966d7b03c99f207e4756de4c364429a8be6d680744fdbd67847"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/NetNaija.cs3",
-        "status":  1,
-        "version":  17,
-        "name":  "NetNaija",
-        "internalName":  "NetNaija",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "NetNaija - Watch Movies, TV Series, Anime, bollywood, Korean \u0026 Hollywood. HD streaming with multi-language.",
-        "fileSize":  92528,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Movie",
-                        "TvSeries",
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://netnaija.film/favicon.ico",
-        "apiVersion":  1,
-        "fileHash":  "sha256-0ca8b8e382bb86b12dfdf814776a2886d8db630cd065af1dcdb75d1b26a4512c"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/NetNaija-box.cs3",
-        "status":  1,
-        "version":  2,
-        "name":  "NetNaija-box",
-        "internalName":  "NetNaija-box",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "NetNaija-box - Multi Language Movies, Series and Live Sports. HD streaming with multiple dubs and subtitles.",
-        "fileSize":  140983,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Movie",
-                        "TvSeries",
-                        "Live"
-                    ],
-        "iconUrl":  "https://netnaija.film/favicon.ico",
-        "apiVersion":  1,
-        "fileHash":  "sha256-3d32310ce282f2e3815d0bf4e74e3d931e42eacf347da9fb197f64f1d23b8b55"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/NineAnime.cs3",
-        "status":  1,
-        "version":  6,
-        "name":  "NineAnime",
-        "internalName":  "NineAnime",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "anime from 9anime clone with sub and dub",
-        "fileSize":  49894,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://cachedimages.podchaser.com/256x256/aHR0cHM6Ly9pLmF1ZGlvbWFjay5jb20vOWFuaW1lcy8zODE4MDE3MGZmLndlYnA%2FbWluPXRydWUmaGVpZ2h0PTE0MDAmd2lkdGg9MTQwMA%3D%3D/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc%3D",
-        "apiVersion":  1,
-        "fileHash":  "sha256-f212bf1befe906c655648c2a0feabedef6dd44e0a917fa49a75c30d216004a59"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/OttSource.cs3",
-        "status":  1,
-        "version":  5,
-        "name":  "OttSource",
-        "internalName":  "OttSource",
-        "authors":  [
-                        "Faisal"
-                    ],
-        "description":  "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
-        "fileSize":  64790,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "hi",
-        "tvTypes":  [
-                        "Movie",
-                        "TvSeries"
-                    ],
-        "iconUrl":  "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/CNC%20Verse/icon.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-8764cba18efd50984c9f5773e96b40098bdab612d53e149f1c0a1e59f8b2d0e2"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/RaghavAnime.cs3",
-        "status":  1,
-        "version":  76,
-        "name":  "RaghavAnime",
-        "internalName":  "RaghavAnime",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "ONE STOP SOLUTION FOR ANIME(SUB,DUB) - Raghav Aggregated Anime Pluginn )",
-        "fileSize":  636982,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://www.pngall.com/wp-content/uploads/13/Anime-Logo-PNG-Images.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-cddeb204b48a044abb4acd269e9abd6036912c7a26703218add5d1fa3f42aff5"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/RaghavAnimeKitsu.cs3",
-        "status":  1,
-        "version":  28,
-        "name":  "RaghavAnimeKitsu",
-        "internalName":  "RaghavAnimeKitsu",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "ONE STOP SOLUTION FOR ANIME(SUB,DUB) - Kitsu Catalog",
-        "fileSize":  647125,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://www.pngall.com/wp-content/uploads/13/Anime-Logo-PNG-Images.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-a5d569216e0644bf5e2909a37b437facbc124f7c16f1945a0565888c20ec20e3"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/RareAnimesIndia.cs3",
-        "status":  1,
-        "version":  3,
-        "name":  "RareAnimesIndia",
-        "internalName":  "RareAnimesIndia",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "hindi cartoon (unstable and many dead links)",
-        "fileSize":  158192,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "hi",
-        "tvTypes":  [
-                        "Anime",
-                        "Cartoon",
-                        "TvSeries",
-                        "Movie"
-                    ],
-        "iconUrl":  "https://www.rareanimes.mov/wp-content/uploads/2023/11/cropped-Rare-Animes-India.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-595a496db17bd109fcfbc6690bde38abd02a7fc247fe8ba89da43c30bb87a2bc"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/ReAnime.cs3",
-        "status":  1,
-        "version":  4,
-        "name":  "ReAnime",
-        "internalName":  "ReAnime",
-        "authors":  [
-                        "KSHITIJ8473"
-                    ],
-        "description":  "Re:ANIME - Anime with Sub \u0026 Dub",
-        "fileSize":  81265,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://reanime.to/favicon-32x32.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-c1c59e7ca641568725017be10d591d37fb1f48484d89cf27074bd256f1fbcab3"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/ReplayZone.cs3",
-        "status":  1,
-        "version":  4,
-        "name":  "ReplayZone",
-        "internalName":  "ReplayZone",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Sports Replays — Football, Baseball, Rugby \u0026 Motorsport",
-        "fileSize":  36606,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Live"
-                    ],
-        "iconUrl":  "https://media.istockphoto.com/id/1321048723/vector/r-letter-in-the-circle-logo.jpg?s=612x612\u0026w=0\u0026k=20\u0026c=S9TWFtRs2omUlxY2RsyUImNadAVyK3xLdMZJOxAfpSM=",
-        "apiVersion":  1,
-        "fileHash":  "sha256-a095b1f37e1e49e02253ee0fd45930d7322f320888a326037f1871d4b006682e"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/SDmovies.cs3",
-        "status":  1,
-        "version":  4,
-        "name":  "SDmovies",
-        "internalName":  "SDmovies",
-        "authors":  [
-                        "Faisal"
-                    ],
-        "description":  "Multi language Movies and Tv shows provider",
-        "fileSize":  23735,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "hi",
-        "tvTypes":  [
-                        "TvSeries",
-                        "Movie",
-                        "AsianDrama",
-                        "Anime",
-                        "Torrent"
-                    ],
-        "iconUrl":  "https://sdmoviespoint.cyou/favicon.ico",
-        "apiVersion":  1,
-        "fileHash":  "sha256-f44e4429934eb9fbc38fcb59949bc591f0d0914963eba5f94d28375cc1399747"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Senshi.cs3",
-        "status":  1,
-        "version":  8,
-        "name":  "Senshi",
-        "internalName":  "Senshi",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Anime with sub \u0026 dub, multi-language subtitles",
-        "fileSize":  108271,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://senshi.to/assets/Senshi_Logo-D4bDbCzd.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-39edb5db69e4e0f28c786f6d5da703aedb25a1cb6ddc770e6d9ffc8780596652"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/StreamedPk.cs3",
-        "status":  1,
-        "version":  12,
-        "name":  "StreamedPk",
-        "internalName":  "StreamedPk",
-        "authors":  [
-                        "RAGHAV"
-                    ],
-        "description":  "ALL LIVE SPORTS WITH MULTIPLE SERVER",
-        "fileSize":  51492,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Live"
-                    ],
-        "iconUrl":  "https://streamed.pk/favicon.png",
-        "apiVersion":  1,
-        "fileHash":  "sha256-a52a83c09e69df3f65e25791e202903982d532da3be41900b3c8024174112f29"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/StreamHubOne.cs3",
-        "status":  1,
-        "version":  56,
-        "name":  "StreamHubOne",
-        "internalName":  "StreamHubOne",
-        "authors":  [
-                        "Faisal"
-                    ],
-        "description":  "StreamHub One - Multilingual provider",
-        "fileSize":  948506,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "hi",
-        "tvTypes":  [
-                        "Movie",
-                        "TvSeries",
-                        "Anime",
-                        "AnimeMovie",
-                        "AsianDrama"
-                    ],
-        "iconUrl":  "",
-        "apiVersion":  1,
-        "fileHash":  "sha256-4dd2a3c2a58d20cac93f281e2ab6819fb957c5e33b1130b90c758c6d4c0b08b5"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/TheMoviesFlix.cs3",
-        "status":  1,
-        "version":  22,
-        "name":  "TheMoviesFlix",
-        "internalName":  "TheMoviesFlix",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "stream movies \u0026 TV series HINDI,ENGLISH - TheMoviesFlix Provider",
-        "fileSize":  76049,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Movie",
-                        "TvSeries"
-                    ],
-        "iconUrl":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj_C9WX4AwepepLyw_cF-EIJeRpqgI4wDiquYSoP9xDFFAKFtTVM-P_zo\u0026s=10",
-        "apiVersion":  1,
-        "fileHash":  "sha256-409d490bf3b039b5cd80ef5f02ddfe6b20c548101519c5996f20ff433c20e6e9"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/TorrentsV1.cs3",
-        "status":  1,
-        "version":  19,
-        "name":  "TorrentsV1",
-        "internalName":  "TorrentsV1",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Torrent support for Anime, Movies and TV via Torrentio, TorrentsDB, Animetosho and custom Stremio addons",
-        "fileSize":  101137,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA",
-                        "Movie",
-                        "TvSeries",
-                        "Torrent"
-                    ],
-        "iconUrl":  "https://png.pngtree.com/element_our/png/20181227/movie-icon-which-is-designed-for-all-application-purpose-new-png_287896.jpg",
-        "apiVersion":  1,
-        "fileHash":  "sha256-3d933d4a83cdde9383b00f96c979a0fe4facaf722043fce5d518eb3fc573d740"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/TwoDHive.cs3",
-        "status":  1,
-        "version":  17,
-        "name":  "TwoDHive",
-        "internalName":  "TwoDHive",
-        "authors":  [
-                        "raghav"
-                    ],
-        "description":  "Anime and movies from 2Dhive with Sub and Dub support",
-        "fileSize":  54581,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://wallpapers.com/images/hd/anime-symbols-full-metal-alchemist-homunculi-black-and-red-59twpz44gslsiv1o.jpg",
-        "apiVersion":  1,
-        "fileHash":  "sha256-85c3f1bca63d6e6c892417439a7a525cc266897263adeac55ec2ebbf4a5836c2"
-    },
-    {
-        "url":  "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Xanime.cs3",
-        "status":  1,
-        "version":  1,
-        "name":  "Xanime",
-        "internalName":  "Xanime",
-        "authors":  [
-                        "KSHITIJ8473"
-                    ],
-        "description":  "anime with sub and dub",
-        "fileSize":  51339,
-        "repositoryUrl":  "https://github.com/yonkou0/CloudStreamRepo",
-        "language":  "en",
-        "tvTypes":  [
-                        "Anime",
-                        "AnimeMovie",
-                        "OVA"
-                    ],
-        "iconUrl":  "https://www.google.com/s2/favicons?domain=xanime.me\u0026sz=%size%",
-        "apiVersion":  1,
-        "fileHash":  "sha256-6e59602e2707e14d8b756d1a31fd5fe29e73a3ce9ab5a789bc48da4e82887f33"
-    }
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniChan.cs3",
+    "status": 1,
+    "version": 14,
+    "name": "AniChan",
+    "internalName": "AniChan",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Watch Anime in HD with Sub, Dub and Hardsub",
+    "fileSize": 76097,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=anichan.net&sz=%size%",
+    "apiVersion": 1,
+    "fileHash": "sha256-35b2164269b1f2b2afaa0437bdca2167c40ba9f7b671e1dab933a77055080b43"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Anidap.cs3",
+    "status": 1,
+    "version": 17,
+    "name": "Anidap",
+    "internalName": "Anidap",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Anime with Sub, Dub & Hardsub from Anidap",
+    "fileSize": 79693,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://anikuro.ru/static/favicon/favicon-96x96.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-9efaa55e071e66bcafda161d52e85aafe8139ab383c3b739c676b79fbeec1e25"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniKotoAnime.cs3",
+    "status": 1,
+    "version": 17,
+    "name": "AniKotoAnime",
+    "internalName": "AniKotoAnime",
+    "authors": [
+      "KSHITIJ8473"
+    ],
+    "description": "AniKoto Anime - Watch Anime Sub & Dub in HD",
+    "fileSize": 57631,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://anikototv.to/AnikotoTheme/assets/images/favicon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-6a5d5bf3eb490a27e1c65737389f3e3a2542abbea1f2f65877e3630ddf67521d"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AnimeInWeb.cs3",
+    "status": 1,
+    "version": 4,
+    "name": "AnimeInWeb",
+    "internalName": "AnimeInWeb",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Anime sub indo from AnimeInWeb with multiple qualities",
+    "fileSize": 65969,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "id",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA",
+      "TvSeries"
+    ],
+    "iconUrl": "https://animeinweb.com/favicon.ico",
+    "apiVersion": 1,
+    "fileHash": "sha256-9004f282854506daf658a23ddd367707f05eaee1f3b67f529300778d8726a287"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AnimeWorldIndia.cs3",
+    "status": 1,
+    "version": 8,
+    "name": "AnimeWorldIndia",
+    "internalName": "AnimeWorldIndia",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Anime World India - Hindi, Tamil, Telugu Anime & Cartoons with multi-audio",
+    "fileSize": 61528,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "hi",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "Cartoon"
+    ],
+    "iconUrl": "https://watchanimeworld.top/wp-content/uploads/AW_Smiley.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-27b76b19c38ff38cd74c0d6f34430cfcc7756e9db2d2322c4891658a409f6b2a"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Animo.cs3",
+    "status": 1,
+    "version": 6,
+    "name": "Animo",
+    "internalName": "Animo",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Anime(sub,dub)",
+    "fileSize": 51023,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://4animo.xyz/logo.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-7ab91b533fdcb50761f1bd8bd31a315965eba00da830d51d2ffec94775f915a7"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniPM.cs3",
+    "status": 1,
+    "version": 4,
+    "name": "AniPM",
+    "internalName": "AniPM",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Anime with Sub & Dub from ani.pm",
+    "fileSize": 77495,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=ani.pm&sz=64",
+    "apiVersion": 1,
+    "fileHash": "sha256-086584257908d19c49c212cad427c51a06a5c901b9255787ad278873030e46aa"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniStream.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "AniStream",
+    "internalName": "AniStream",
+    "authors": [
+      "Faisal"
+    ],
+    "description": "Watch anime in HD with English Sub and Dub from AniStream",
+    "fileSize": 30420,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "iconUrl": "https://anistream.one/og.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-22bf1e1c6ac3e027569a731201d06846affae653324e4893e9a504125f2d4595"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniSuge.cs3",
+    "status": 1,
+    "version": 6,
+    "name": "AniSuge",
+    "internalName": "AniSuge",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Anime from AniSuge with Sub and Dub support",
+    "fileSize": 71543,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://anisuge.tv/assets/images/favicon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-53b5f96901ab08afefb3340f3278bbfad0989ecc4162b054ea7b449fbdff7df4"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/AniWaves.cs3",
+    "status": 1,
+    "version": 7,
+    "name": "AniWaves",
+    "internalName": "AniWaves",
+    "authors": [
+      "raghav"
+    ],
+    "description": "720p sub and dub anime",
+    "fileSize": 64493,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://aniwaves.ru/assets/images/aniwave.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-3915561a3afb9a0cecc600d440bb23fa2b190acac954c23c2de9dfde77a13d68"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Ctg Stream.cs3",
+    "status": 1,
+    "version": 2,
+    "name": "Ctg Stream",
+    "internalName": "Ctg Stream",
+    "authors": [
+      "Faisal"
+    ],
+    "description": "multi Language Provider",
+    "fileSize": 21713,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "AsianDrama",
+      "Anime",
+      "Torrent"
+    ],
+    "apiVersion": 1,
+    "fileHash": "sha256-4f792078033a2a31eb30a61053a454f924455071162d6881efca64652bd7cbef"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/DamiTVProvider.cs3",
+    "status": 1,
+    "version": 25,
+    "name": "DamiTVProvider",
+    "internalName": "DamiTVProvider",
+    "authors": [
+      "KSHITIJ8473"
+    ],
+    "description": "Live sports HIGH QAULITY",
+    "fileSize": 62025,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAvvc01IqbjrBZ-AhXwvyrIblnaJBA04IUNKmJNRbqEh46fWVItaGuoRsj&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-bcbd165dd27e764cfd382a4c84379e47e7d83744b498bbe342eb4cca0ca520d5"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/GoTaku.cs3",
+    "status": 1,
+    "version": 4,
+    "name": "GoTaku",
+    "internalName": "GoTaku",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Hardsub and dub from Gotaku",
+    "fileSize": 64360,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://gotaku.to/images/icons/logo.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-e9ca8cc26c114d0bf827e212c722d564e24d8b34fe0bb764b27b51296a4a6dcb"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/JustPlay.cs3",
+    "status": 1,
+    "version": 6,
+    "name": "JustPlay",
+    "internalName": "JustPlay",
+    "authors": [
+      "KSHITIJ8473"
+    ],
+    "description": "Movies and series from multiple sources",
+    "fileSize": 272554,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSknDTJSN2AhrHzfxF75gr9-qG4x-JzwHRnvPDjZP2aa-93KRaXPF1_ZQdm&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-47585a704a8f74a2b14b7201528e5080b173374d0ced82baf26d0e00bba05e51"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Kdesa.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "Kdesa",
+    "internalName": "Kdesa",
+    "authors": [
+      "KSHITIJ8473"
+    ],
+    "description": "KDesa - Movies, TV Shows & Anime Multi-source,Multi-audio",
+    "fileSize": 152591,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime"
+    ],
+    "iconUrl": "https://kdesa.stream/android-chrome-192x192.png?v=6",
+    "apiVersion": 1,
+    "fileHash": "sha256-af0c32c46f27c1e72b2c964929ee99fcca18efefecbf66a393dc11dc1441ae1e"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/LIVETVProvider.cs3",
+    "status": 1,
+    "version": 37,
+    "name": "LIVETVProvider",
+    "internalName": "LIVETVProvider",
+    "authors": [
+      "raghav,cnc"
+    ],
+    "description": "Watch LIVE TV channels & sports via LIVE TV",
+    "fileSize": 93858,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://png.pngtree.com/png-vector/20191026/ourmid/pngtree-live-icon-design-template-vector-isolated-illustration-png-image_1874482.jpg",
+    "apiVersion": 1,
+    "fileHash": "sha256-48e43264ec9034412668cc1cb70c6febb7c6e81ffecca60ee1c26f00f9299659"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Miruro.cs3",
+    "status": 1,
+    "version": 7,
+    "name": "Miruro",
+    "internalName": "Miruro",
+    "authors": [
+      "raghav"
+    ],
+    "description": "ANIME(SUB,DUB)-MULTI SOURCE",
+    "fileSize": 92237,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://repository-images.githubusercontent.com/567000493/281ea6b4-7159-4ac7-b5f1-34abf335c033",
+    "apiVersion": 1,
+    "fileHash": "sha256-922a8c2d07bbe77d2a171ab8bbb676e8a9aa6baa4682bde83a3e0eedf25ee2cc"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/MovieBox.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "MovieBox",
+    "internalName": "MovieBox",
+    "authors": [
+      "Faisal"
+    ],
+    "description": "MovieBox Native - Pure API Provider with Crypto Bypass",
+    "fileSize": 93567,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?sz=128&domain=movieboxpro.app",
+    "apiVersion": 1,
+    "fileHash": "sha256-37a0dead3485029324f33313b4d6c7c332bc9f2aa43e6c1d5eef376c74d298f8"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Multimovies.cs3",
+    "status": 1,
+    "version": 7,
+    "name": "Multimovies",
+    "internalName": "Multimovies",
+    "authors": [
+      "raghav,phisher,csksy"
+    ],
+    "description": "Multimovies - Movies, TV Shows & Anime. All sources: Cineverse, GD Mirror, Vidout, Nxsha (multi-server) and more",
+    "fileSize": 120090,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime"
+    ],
+    "iconUrl": "https://multimovies.casa/wp-content/uploads/2024/01/cropped-CompressJPEG.online_512x512_image.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-2caee4bd3581054584c11cd14dd68c7e15d454641e1bd665b2bfb9ec3af4d831"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/NetNaija.cs3",
+    "status": 1,
+    "version": 17,
+    "name": "NetNaija",
+    "internalName": "NetNaija",
+    "authors": [
+      "raghav"
+    ],
+    "description": "NetNaija - Watch Movies, TV Series, Anime, bollywood, Korean & Hollywood. HD streaming with multi-language.",
+    "fileSize": 92470,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://netnaija.film/favicon.ico",
+    "apiVersion": 1,
+    "fileHash": "sha256-949391a84f5d9b88e4ff141ca55532dcb61b50b7bd12adcae80e6dfb81afe58e"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/NetNaija-box.cs3",
+    "status": 1,
+    "version": 2,
+    "name": "NetNaija-box",
+    "internalName": "NetNaija-box",
+    "authors": [
+      "raghav"
+    ],
+    "description": "NetNaija-box - Multi Language Movies, Series and Live Sports. HD streaming with multiple dubs and subtitles.",
+    "fileSize": 140910,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Live"
+    ],
+    "iconUrl": "https://netnaija.film/favicon.ico",
+    "apiVersion": 1,
+    "fileHash": "sha256-b4dbd067dd7c49328a2a1f05a477aa03dbe9f3e7b8a2d2932d4a5ead1246d827"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/NineAnime.cs3",
+    "status": 1,
+    "version": 6,
+    "name": "NineAnime",
+    "internalName": "NineAnime",
+    "authors": [
+      "raghav"
+    ],
+    "description": "anime from 9anime clone with sub and dub",
+    "fileSize": 49893,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://cachedimages.podchaser.com/256x256/aHR0cHM6Ly9pLmF1ZGlvbWFjay5jb20vOWFuaW1lcy8zODE4MDE3MGZmLndlYnA%2FbWluPXRydWUmaGVpZ2h0PTE0MDAmd2lkdGg9MTQwMA%3D%3D/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc%3D",
+    "apiVersion": 1,
+    "fileHash": "sha256-857ff2998810c1a34a50087db15b23840655d86a57606474de62e58672252c6d"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/OttSource.cs3",
+    "status": 1,
+    "version": 5,
+    "name": "OttSource",
+    "internalName": "OttSource",
+    "authors": [
+      "Faisal"
+    ],
+    "description": "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
+    "fileSize": 64790,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/CNC%20Verse/icon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-8764cba18efd50984c9f5773e96b40098bdab612d53e149f1c0a1e59f8b2d0e2"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/RaghavAnime.cs3",
+    "status": 1,
+    "version": 76,
+    "name": "RaghavAnime",
+    "internalName": "RaghavAnime",
+    "authors": [
+      "raghav"
+    ],
+    "description": "ONE STOP SOLUTION FOR ANIME(SUB,DUB) - Raghav Aggregated Anime Pluginn )",
+    "fileSize": 636825,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://www.pngall.com/wp-content/uploads/13/Anime-Logo-PNG-Images.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-bd1424a1e8c5b757785b9f833d0ae7a0c9e7ff7afa49e7bf3d55f0762a924cd1"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/RaghavAnimeKitsu.cs3",
+    "status": 1,
+    "version": 28,
+    "name": "RaghavAnimeKitsu",
+    "internalName": "RaghavAnimeKitsu",
+    "authors": [
+      "raghav"
+    ],
+    "description": "ONE STOP SOLUTION FOR ANIME(SUB,DUB) - Kitsu Catalog",
+    "fileSize": 646898,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://www.pngall.com/wp-content/uploads/13/Anime-Logo-PNG-Images.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-58f56dc5dda105ec169ab95c63b81c071dba9ba45563b2e415b5725c00c70764"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/RareAnimesIndia.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "RareAnimesIndia",
+    "internalName": "RareAnimesIndia",
+    "authors": [
+      "raghav"
+    ],
+    "description": "hindi cartoon (unstable and many dead links)",
+    "fileSize": 158077,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "hi",
+    "tvTypes": [
+      "Anime",
+      "Cartoon",
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://www.rareanimes.mov/wp-content/uploads/2023/11/cropped-Rare-Animes-India.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-b97e462d1ce8626037c0548e1d3c037881cd235981c46dd5fb7157db381cf218"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/ReAnime.cs3",
+    "status": 1,
+    "version": 4,
+    "name": "ReAnime",
+    "internalName": "ReAnime",
+    "authors": [
+      "KSHITIJ8473"
+    ],
+    "description": "Re:ANIME - Anime with Sub & Dub",
+    "fileSize": 81265,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://reanime.to/favicon-32x32.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-c1c59e7ca641568725017be10d591d37fb1f48484d89cf27074bd256f1fbcab3"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/ReplayZone.cs3",
+    "status": 1,
+    "version": 4,
+    "name": "ReplayZone",
+    "internalName": "ReplayZone",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Sports Replays — Football, Baseball, Rugby & Motorsport",
+    "fileSize": 36606,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://media.istockphoto.com/id/1321048723/vector/r-letter-in-the-circle-logo.jpg?s=612x612&w=0&k=20&c=S9TWFtRs2omUlxY2RsyUImNadAVyK3xLdMZJOxAfpSM=",
+    "apiVersion": 1,
+    "fileHash": "sha256-a095b1f37e1e49e02253ee0fd45930d7322f320888a326037f1871d4b006682e"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/SDmovies.cs3",
+    "status": 1,
+    "version": 4,
+    "name": "SDmovies",
+    "internalName": "SDmovies",
+    "authors": [
+      "Faisal"
+    ],
+    "description": "Multi language Movies and Tv shows provider",
+    "fileSize": 23735,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "hi",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "AsianDrama",
+      "Anime",
+      "Torrent"
+    ],
+    "iconUrl": "https://sdmoviespoint.cyou/favicon.ico",
+    "apiVersion": 1,
+    "fileHash": "sha256-f44e4429934eb9fbc38fcb59949bc591f0d0914963eba5f94d28375cc1399747"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Senshi.cs3",
+    "status": 1,
+    "version": 8,
+    "name": "Senshi",
+    "internalName": "Senshi",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Anime with sub & dub, multi-language subtitles",
+    "fileSize": 108271,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://senshi.to/assets/Senshi_Logo-D4bDbCzd.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-39edb5db69e4e0f28c786f6d5da703aedb25a1cb6ddc770e6d9ffc8780596652"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/StreamedPk.cs3",
+    "status": 1,
+    "version": 12,
+    "name": "StreamedPk",
+    "internalName": "StreamedPk",
+    "authors": [
+      "RAGHAV"
+    ],
+    "description": "ALL LIVE SPORTS WITH MULTIPLE SERVER",
+    "fileSize": 51492,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://streamed.pk/favicon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-a52a83c09e69df3f65e25791e202903982d532da3be41900b3c8024174112f29"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/StreamHubOne.cs3",
+    "status": 1,
+    "version": 56,
+    "name": "StreamHubOne",
+    "internalName": "StreamHubOne",
+    "authors": [
+      "Faisal"
+    ],
+    "description": "StreamHub One - Multilingual provider",
+    "fileSize": 948506,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AnimeMovie",
+      "AsianDrama"
+    ],
+    "iconUrl": "",
+    "apiVersion": 1,
+    "fileHash": "sha256-4dd2a3c2a58d20cac93f281e2ab6819fb957c5e33b1130b90c758c6d4c0b08b5"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/TheMoviesFlix.cs3",
+    "status": 1,
+    "version": 22,
+    "name": "TheMoviesFlix",
+    "internalName": "TheMoviesFlix",
+    "authors": [
+      "raghav"
+    ],
+    "description": "stream movies & TV series HINDI,ENGLISH - TheMoviesFlix Provider",
+    "fileSize": 76049,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj_C9WX4AwepepLyw_cF-EIJeRpqgI4wDiquYSoP9xDFFAKFtTVM-P_zo&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-409d490bf3b039b5cd80ef5f02ddfe6b20c548101519c5996f20ff433c20e6e9"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/TorrentsV1.cs3",
+    "status": 1,
+    "version": 19,
+    "name": "TorrentsV1",
+    "internalName": "TorrentsV1",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Torrent support for Anime, Movies and TV via Torrentio, TorrentsDB, Animetosho and custom Stremio addons",
+    "fileSize": 100953,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA",
+      "Movie",
+      "TvSeries",
+      "Torrent"
+    ],
+    "iconUrl": "https://png.pngtree.com/element_our/png/20181227/movie-icon-which-is-designed-for-all-application-purpose-new-png_287896.jpg",
+    "apiVersion": 1,
+    "fileHash": "sha256-181fbdf9af74465222fa79c4af6e8d33feb5612f88c0352c7c139941eb6d97a9"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/TwoDHive.cs3",
+    "status": 1,
+    "version": 17,
+    "name": "TwoDHive",
+    "internalName": "TwoDHive",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Anime and movies from 2Dhive with Sub and Dub support",
+    "fileSize": 54581,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://wallpapers.com/images/hd/anime-symbols-full-metal-alchemist-homunculi-black-and-red-59twpz44gslsiv1o.jpg",
+    "apiVersion": 1,
+    "fileHash": "sha256-85c3f1bca63d6e6c892417439a7a525cc266897263adeac55ec2ebbf4a5836c2"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Xanime.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Xanime",
+    "internalName": "Xanime",
+    "authors": [
+      "KSHITIJ8473"
+    ],
+    "description": "anime with sub and dub",
+    "fileSize": 51339,
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://www.google.com/s2/favicons?domain=xanime.me&sz=%size%",
+    "apiVersion": 1,
+    "fileHash": "sha256-6e59602e2707e14d8b756d1a31fd5fe29e73a3ce9ab5a789bc48da4e82887f33"
+  }
 ]
