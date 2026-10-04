@@ -32,6 +32,7 @@
         "description":  "multi Language Provider",
         "fileSize":  21713,
         "repositoryUrl":  "https://github.com/Faisal0786/TestPlugins-old",
+        "language":  "en",
         "tvTypes":  [
                         "TvSeries",
                         "Movie",
@@ -39,7 +40,6 @@
                         "Anime",
                         "Torrent"
                     ],
-        "iconUrl":  " ",
         "apiVersion":  1,
         "fileHash":  "sha256-4f792078033a2a31eb30a61053a454f924455071162d6881efca64652bd7cbef"
     },
