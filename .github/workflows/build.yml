@@ -41,10 +41,17 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
+          # Ignore file-mode changes (the `chmod +x gradlew` above would otherwise
+          # mark gradlew as modified on Linux runners and dirty the working tree).
+          git config --local core.fileMode false
           git add builds plugins.json repo.json
-          if [[ -n $(git status --porcelain) ]]; then
+          # Only commit when something is actually STAGED. Checking
+          # `git status --porcelain` is wrong: it also reports unstaged changes
+          # (e.g. the gradlew mode change), which makes the branch look dirty even
+          # when there is nothing to commit, and `git commit` then exits 1.
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
             git commit -m "Build $GITHUB_SHA [skip ci]"
             git push
-          else
-            echo "No changes to commit"
           fi
