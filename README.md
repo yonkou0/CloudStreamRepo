@@ -65,6 +65,7 @@ Use `-SkipBuild` to re-assemble without recompiling.
 - Assembly **fails hard** on a missing package file or duplicate `internalName`.
 - `fileSize`/`fileHash` in `plugins.json` are always recomputed from the actual files, so clients can never get a hash mismatch.
 - CI (`.github/workflows/build.yml`) rebuilds everything on push and commits only when outputs change (`[skip ci]` prevents loops).
+- `tools/build-repo.ps1` reports which plugins produced a **different binary** and reminds you to bump `version`, because CloudStream re-downloads a plugin whenever its `fileHash` changes.
 
 ## Disclaimer
 
@@ -74,5 +75,26 @@ all content is hosted by third-party websites. Users are solely responsible for
 their usage and must comply with their local laws. This project is created strictly
 for educational, research and development purposes.
 
-### License
-raghav plugin sources are licensed under [GNU GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html).
+## License
+
+This repository is licensed under the **GNU General Public License v3.0** — see
+[`LICENSE`](LICENSE) for the full text. The plugins in `builds/` are distributed as
+compiled `.cs3` packages; the corresponding source for the 30 source-built modules is
+included in this repository, as GPLv3 requires.
+
+Provenance of the included plugins:
+
+| Set | Count | Upstream author | Terms |
+|---|---|---|---|
+| Source-built modules | 30 | `raghav` / `KSHITIJ8473` / `csksy` | GNU GPLv3 (per upstream) |
+| Imported binaries | 6 | `Faisal0786` | redistributed unmodified from upstream |
+
+Note that CloudStream extensions are decompilable: the `.cs3` packages contain a
+`classes.dex` that carries class and string names in the clear. Hiding the Kotlin
+source therefore provides no meaningful protection against a determined reader, and
+would conflict with the GPLv3 obligations that apply to the source-built modules.
+
+Third-party API keys (for example the Firebase and TMDB keys in
+`LIVETVProvider/build.gradle.kts` and `TorrentsV1/build.gradle.kts`) belong to their
+respective owners and are used here only to call those public APIs.
+
