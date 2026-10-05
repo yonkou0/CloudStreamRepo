@@ -329,14 +329,14 @@
   {
     "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/LIVETVProvider.cs3",
     "status": 1,
-    "version": 37,
+    "version": 38,
     "name": "LIVETVProvider",
     "internalName": "LIVETVProvider",
     "authors": [
       "raghav,cnc"
     ],
     "description": "Watch LIVE TV channels & sports via LIVE TV",
-    "fileSize": 93858,
+    "fileSize": 94088,
     "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
     "language": "en",
     "tvTypes": [
@@ -344,7 +344,7 @@
     ],
     "iconUrl": "https://png.pngtree.com/png-vector/20191026/ourmid/pngtree-live-icon-design-template-vector-isolated-illustration-png-image_1874482.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-48e43264ec9034412668cc1cb70c6febb7c6e81ffecca60ee1c26f00f9299659"
+    "fileHash": "sha256-8b1a2b068af560703881e76af4d0022b07865bd501baa889d690de27a80d6479"
   },
   {
     "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/Miruro.cs3",
