@@ -490,7 +490,7 @@
       "Faisal"
     ],
     "description": "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
-    "fileSize": 64790,
+    "fileSize": 64791,
     "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
     "language": "hi",
     "tvTypes": [
@@ -499,7 +499,7 @@
     ],
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/CNC%20Verse/icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-8764cba18efd50984c9f5773e96b40098bdab612d53e149f1c0a1e59f8b2d0e2"
+    "fileHash": "sha256-809b9121f248795a6584ee812054f3e95483323a68996389002f3c9ac47256bc"
   },
   {
     "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/RaghavAnime.cs3",
