@@ -481,7 +481,7 @@
     "fileHash": "sha256-f212bf1befe906c655648c2a0feabedef6dd44e0a917fa49a75c30d216004a59"
   },
   {
-    "url": "https://raw.githubusercontent.com/Faisal0786/TestPlugins-old/builds/OttSource.cs3",
+    "url": "https://raw.githubusercontent.com/yonkou0/CloudStreamRepo/main/builds/OttSource.cs3",
     "status": 1,
     "version": 6,
     "name": "OttSource",
@@ -491,7 +491,7 @@
     ],
     "description": "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
     "fileSize": 64790,
-    "repositoryUrl": "https://github.com/Faisal0786/TestPlugins-old",
+    "repositoryUrl": "https://github.com/yonkou0/CloudStreamRepo",
     "language": "hi",
     "tvTypes": [
       "Movie",
