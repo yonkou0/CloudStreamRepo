@@ -4,6 +4,7 @@ import org.gradle.api.plugins.JavaPluginExtension
 import org.gradle.kotlin.dsl.register
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
+import java.io.File as JFile
 
 buildscript {
     repositories {
@@ -27,6 +28,44 @@ allprojects {
     }
 }
 
+// -----------------------------------------------------------------------
+// Seed the CloudStream gradle plugin's API-jar cache with our vendored copy.
+//
+// The plugin looks for its API at
+//   <gradleUserHome>/caches/cloudstream/cloudstream/cloudstream.jar
+// and downloads it from the MOVING "pre-release" GitHub release tag whenever
+// that file is absent. CloudStream re-uploads that asset on every pre-release
+// build, so a clean CI runner picks up different API bytes than a developer
+// machine that already has the file cached - the same source then compiles to
+// different classes.dex debug metadata, every .cs3 gets a new fileHash, and
+// CloudStream re-downloads all plugins for no functional change.
+//
+// Copying the vendored jar into that exact cache location BEFORE the plugin is
+// applied makes the download a no-op, so local and CI builds are reproducible.
+// This mirrors how the repo already vendors the gradle plugin itself under
+// local-repo/. See the long comment in subprojects { } for how to bump it.
+// -----------------------------------------------------------------------
+fun pinCloudstreamApiJar(rootDir: JFile, gradleUserHome: JFile) {
+    val vendoredApi = JFile(rootDir, "local-repo/cloudstream-api/pre-release/classes.jar")
+    if (!vendoredApi.isFile) {
+        logger.lifecycle("No vendored CloudStream API jar - using the upstream download.")
+        return
+    }
+    val cacheJar = JFile(gradleUserHome, "caches/cloudstream/cloudstream/cloudstream.jar")
+    // Only copy when the bytes actually differ, so we do not invalidate caches.
+    val sameFile = cacheJar.isFile &&
+        cacheJar.length() == vendoredApi.length() &&
+        cacheJar.inputStream().use { a ->
+            vendoredApi.inputStream().use { b -> a.readBytes().contentEquals(b.readBytes()) }
+        }
+    if (sameFile) return
+    cacheJar.parentFile.mkdirs()
+    vendoredApi.copyTo(cacheJar, overwrite = true)
+    logger.lifecycle("Pinned CloudStream API jar -> $cacheJar")
+}
+
+pinCloudstreamApiJar(rootDir, gradle.gradleUserHomeDir)
+
 fun Project.cloudstream(configuration: CloudstreamExtension.() -> Unit) =
     extensions.getByName<CloudstreamExtension>("cloudstream").configuration()
 
@@ -46,6 +85,34 @@ subprojects {
     cloudstream {
         setRepo(System.getenv("GITHUB_REPOSITORY") ?: "https://github.com/KSHITIJ8473/raghav")
         authors = listOf("KSHITIJ8473")
+
+        // ------------------------------------------------------------------
+        // Pin the CloudStream API jar.
+        //
+        // By default the gradle plugin resolves
+        //   https://github.com/recloudstream/cloudstream/releases/download/pre-release/classes.jar
+        // "pre-release" is a MOVING tag: CloudStream re-uploads that asset on
+        // every pre-release build, so two builds of identical source produce
+        // different classes.dex debug metadata, every .cs3 gets a new
+        // fileHash, and CloudStream re-downloads all plugins for no reason.
+        // It also makes builds non-reproducible, because CI would download
+        // whatever was uploaded most recently rather than what local uses.
+        //
+        // Only the "pre-release" tag publishes classes.jar (the versioned tags
+        // v4.8.0/v4.7.0/... do not), so pinning a version string cannot work -
+        // the plugin ignores it and hardcodes the moving tag. Instead we vendor
+        // the exact jar we build against and seed the plugin's own cache with it
+        // below, so local and CI always compile against identical API bytes.
+        //
+        // TO UPDATE the API on purpose:
+        //   1. download the new classes.jar:
+        //      https://github.com/recloudstream/cloudstream/releases/download/pre-release/classes.jar
+        //   2. overwrite local-repo/cloudstream-api/pre-release/classes.jar
+        //   3. update the sha256 in tools/cloudstream-api.lock.json
+        //   4. bump the 'version' of every module you want users to re-download
+        // tools/build-repo.ps1 verifies the vendored jar against that lock file,
+        // so an accidental or partial replacement fails the build loudly.
+        // ------------------------------------------------------------------
     }
 
     android {

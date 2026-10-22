@@ -4,7 +4,7 @@ Combined **stable** CloudStream plugin repository, assembled from two sources:
 
 | Source | What it is | Count |
 |---|---|---|
-| `raghav-master` (KSHITIJ8473) | Kotlin plugin **source code**, freshly compiled against the latest CloudStream pre-release API | 30 |
+| `raghav-master` (KSHITIJ8473) | Kotlin plugin **source code**, compiled against the pinned CloudStream API (see [Reproducible builds](#reproducible-builds-no-more-phantom-updates)) | 30 |
 | `Desi-main` (Faisal0786) | Compiled `.cs3` **binaries** (upstream source no longer available), imported byte-identical and hash-verified | 6 |
 
 **36 plugins total** — only plugins that pass validation are included.
@@ -66,6 +66,95 @@ Use `-SkipBuild` to re-assemble without recompiling.
 - `fileSize`/`fileHash` in `plugins.json` are always recomputed from the actual files, so clients can never get a hash mismatch.
 - CI (`.github/workflows/build.yml`) rebuilds everything on push and commits only when outputs change (`[skip ci]` prevents loops).
 - `tools/build-repo.ps1` reports which plugins produced a **different binary** and reminds you to bump `version`, because CloudStream re-downloads a plugin whenever its `fileHash` changes.
+
+## Reproducible builds (no more phantom updates)
+
+The CloudStream Gradle plugin resolves its API jar from
+
+```
+https://github.com/recloudstream/cloudstream/releases/download/pre-release/classes.jar
+```
+
+`pre-release` is a **moving tag**. CloudStream re-uploads that asset on every
+pre-release build, so the same source compiled on two different days produced
+different `classes.dex` debug metadata. Every affected `.cs3` got a new
+`fileHash`, and **all users re-downloaded every plugin** for no functional
+change. It was also non-reproducible: a clean CI runner downloaded the newest
+jar while a developer machine reused its older cache.
+
+Pinning a version does not help - only `pre-release` publishes `classes.jar`
+(the `v4.8.0`/`v4.7.0`/... tags have no such asset), and the plugin ignores the
+version string in `build.gradle.kts` anyway.
+
+**The fix:** the exact jar we build against is vendored at
+`local-repo/cloudstream-api/pre-release/classes.jar`, and `build.gradle.kts`
+seeds the plugin's own cache with it before the plugin is applied. Its sha256 is
+recorded in `tools/cloudstream-api.lock.json` and verified on every build, so a
+partial or accidental replacement fails loudly instead of silently shipping 30
+changed binaries.
+
+Current pin: `4.7.0-PRE`, sha256 `4abf03265aac...`.
+
+**To upgrade the CloudStream API deliberately:**
+
+1. Download the new jar:
+   `https://github.com/recloudstream/cloudstream/releases/download/pre-release/classes.jar`
+2. Overwrite `local-repo/cloudstream-api/pre-release/classes.jar`
+3. Update the `sha256` and `size` in `tools/cloudstream-api.lock.json`
+4. Bump the `version` of every module you want users to re-download
+
+Step 4 matters: without a version bump, CloudStream keeps serving users the
+cached copy, so an API upgrade can appear to do nothing.
+
+## Upstream health checks
+
+These providers depend on third-party mirror sites that **rotate domains without
+notice** (the NetMirror family has already gone `net52` → `net77` → a dead `net50`).
+When a domain rots, every user of that provider gets an error and nothing in the
+build fails. `tools/build-repo.ps1` therefore probes the live endpoints at the end of
+every run and reports:
+
+```
+==> Upstream health: 6/6 healthy
+
+Check                             Status Detail
+-----                             ------ ------
+OttSource / main search API       OK
+OttSource / main detail API       OK
+OttSource / PrimeVideo search API OK
+OttSource / Hotstar search API    OK
+OttSource / playlist API          OK
+OttSource / ad-bypass host        OK
+```
+
+Status meanings:
+
+| Status | Meaning |
+|---|---|
+| `OK` | Serving the expected content |
+| `GATED` | Answered HTTP 200 but with an app-gate page instead of data |
+| `BROKEN` | Responded, but the expected fields are missing (API shape changed) |
+| `DEAD` | Wrong HTTP status, or a redirect to a host that no longer resolves |
+| `UNREACHABLE` | DNS or connection failure |
+
+The checks assert on the **response body**, not just the status code, because these
+sites serve their app-gate page with HTTP 200 — a status-only check would report a
+fully blocked provider as healthy.
+
+Probes live in [`tools/domain-health.json`](tools/domain-health.json); add an entry
+whenever a provider changes domain. Results are a **warning by default** so a
+third-party outage never blocks a release:
+
+```powershell
+# default: warn but still publish
+pwsh -File tools/build-repo.ps1
+
+# offline / air-gapped
+pwsh -File tools/build-repo.ps1 -SkipHealthCheck
+
+# strict: fail the build if any upstream is unhealthy (useful in CI)
+pwsh -File tools/build-repo.ps1 -FailOnUnhealthy
+```
 
 ## Disclaimer
 

@@ -21,7 +21,12 @@
 #>
 [CmdletBinding()]
 param(
-    [switch]$SkipBuild
+    [switch]$SkipBuild,
+    # Skip the upstream liveness probes (useful offline / on air-gapped builds).
+    [switch]$SkipHealthCheck,
+    # Turn unhealthy upstreams into a hard build failure instead of a warning.
+    # Off by default: a third-party site being down should not block a release.
+    [switch]$FailOnUnhealthy
 )
 
 $ErrorActionPreference = 'Stop'
@@ -35,6 +40,114 @@ function Get-Sha256([string]$Path) {
     $fs  = [System.IO.File]::OpenRead($Path)
     try { $hash = $sha.ComputeHash($fs) } finally { $fs.Close() }
     return ([System.BitConverter]::ToString($hash) -replace '-', '').ToLowerInvariant()
+}
+
+# ---------------------------------------------------------------- health check
+# Probes the upstream sites the plugins depend on, so domain rot is caught at
+# build time instead of by users.
+#
+# These mirror sites rotate domains often (net52 -> net77 -> a dead net50), and
+# they answer an app-gate page with HTTP 200. A status-only check would call
+# that healthy, so every check also asserts on the response body.
+function Test-UpstreamHealth {
+    param(
+        [string]$ConfigPath,
+        [switch]$FailOnUnhealthy
+    )
+
+    if (-not (Test-Path -LiteralPath $ConfigPath)) {
+        Write-Host "==> Health check skipped (no $(Split-Path -Leaf $ConfigPath))"
+        return $true
+    }
+
+    try {
+        $cfg = Get-Content $ConfigPath -Raw | ConvertFrom-Json
+    } catch {
+        Write-Warning "Could not parse $(Split-Path -Leaf $ConfigPath): $($_.Exception.Message)"
+        return $true
+    }
+    $checks = @($cfg.checks)
+    if ($checks.Count -eq 0) {
+        Write-Host '==> Health check skipped (no checks configured)'
+        return $true
+    }
+
+    $timeout = if ($cfg.timeoutSeconds) { [int]$cfg.timeoutSeconds } else { 20 }
+    $ua = if ($cfg.userAgent) { [string]$cfg.userAgent } else { 'CloudStreamRepo-healthcheck/1.0' }
+
+    Add-Type -AssemblyName System.Net.Http
+    $handler = New-Object System.Net.Http.HttpClientHandler
+    # A redirect to a dead host is a failure, not a pass - do not follow it.
+    $handler.AllowAutoRedirect = $false
+    $client = New-Object System.Net.Http.HttpClient($handler)
+    $client.Timeout = [TimeSpan]::FromSeconds($timeout)
+    [void]$client.DefaultRequestHeaders.TryAddWithoutValidation('User-Agent', $ua)
+
+    $results = @()
+    foreach ($c in $checks) {
+        $status = 'OK'
+        $detail = ''
+        try {
+            $req = New-Object System.Net.Http.HttpRequestMessage
+            $req.Method = [System.Net.Http.HttpMethod]::Get
+            $req.RequestUri = [string]$c.url
+            $resp = $client.SendAsync($req).Result
+            $body = $resp.Content.ReadAsStringAsync().Result
+            $code = [int]$resp.StatusCode
+
+            $expected = if ($null -ne $c.status) { [int]$c.status } else { 200 }
+            if ($code -ge 300 -and $code -lt 400) {
+                $loc = if ($resp.Headers.Location) { $resp.Headers.Location } else { '(no Location)' }
+                $status = 'DEAD'
+                $detail = "HTTP $code redirect -> $loc"
+            } elseif ($code -ne $expected) {
+                $status = 'DEAD'
+                $detail = "HTTP $code (expected $expected)"
+            } else {
+                foreach ($bad in @($c.notContains)) {
+                    if ($bad -and $body -like "*$bad*") {
+                        $status = 'GATED'
+                        $detail = "served '$bad'"
+                        break
+                    }
+                }
+                if ($status -eq 'OK') {
+                    foreach ($good in (@($c.contains) | Where-Object { $_ })) {
+                        if ($body -notlike "*$good*") {
+                            $status = 'BROKEN'
+                            $detail = "body missing '$good'"
+                            break
+                        }
+                    }
+                }
+            }
+        } catch {
+            $status = 'UNREACHABLE'
+            $detail = $_.Exception.GetBaseException().Message
+        }
+        $results += [pscustomobject]@{
+            Check  = [string]$c.name
+            Status = $status
+            Detail = $detail
+        }
+    }
+    $client.Dispose()
+
+    $bad = @($results | Where-Object { $_.Status -ne 'OK' })
+    Write-Host ''
+    Write-Host "==> Upstream health: $($results.Count - $bad.Count)/$($results.Count) healthy"
+    $results | Format-Table -AutoSize | Out-String | Write-Host
+
+    if ($bad.Count -gt 0) {
+        Write-Warning "$($bad.Count) upstream endpoint(s) are not serving normal content."
+        Write-Warning 'Plugins are still built and published; users of the affected providers'
+        Write-Warning 'will see errors. If the domain changed upstream, update the URL inside the'
+        Write-Warning 'plugin and adjust tools/domain-health.json.'
+        if ($FailOnUnhealthy) {
+            throw "Health check failed for $($bad.Count) endpoint(s)."
+        }
+    }
+    return ($bad.Count -eq 0)
 }
 
 # Reads a JSON file containing an array and always returns a flat object[].
@@ -126,8 +239,58 @@ function ConvertTo-CanonicalJson($InputObject, [int]$Depth, [int]$Indent = 0) {
 }
 
 
+# ---------------------------------------------------------------- api pin check
+# The CloudStream gradle plugin downloads its API jar from the MOVING
+# "pre-release" GitHub release asset, so two builds of identical source embed
+# different debug metadata in classes.dex. Every .cs3 then gets a new fileHash
+# and CloudStream re-downloads all plugins for no functional change.
+#
+# build.gradle.kts points urlPrefix at the vendored copy in
+# local-repo/cloudstream-api, which makes builds reproducible. This check makes
+# that pin trustworthy: if the vendored jar is replaced or corrupted without the
+# lock file being updated, the build stops here instead of silently shipping 30
+# changed binaries.
+function Test-CloudstreamApiPin {
+    param([string]$Root)
+
+    $lockPath = Join-Path (Join-Path $Root 'tools') 'cloudstream-api.lock.json'
+    if (-not (Test-Path -LiteralPath $lockPath)) {
+        Write-Warning 'cloudstream-api.lock.json not found - the pinned CloudStream API jar cannot be verified.'
+        return $true
+    }
+    try {
+        $lock = Get-Content $lockPath -Raw | ConvertFrom-Json
+    } catch {
+        throw "Could not parse cloudstream-api.lock.json: $($_.Exception.Message)"
+    }
+
+    $jar = Join-Path $Root ([string]$lock.vendorPath)
+    if (-not (Test-Path -LiteralPath $jar)) {
+        throw "Pinned CloudStream API jar is missing: $jar`n" +
+              "Download it from $($lock.sourceUrl) and save it to that path, or delete" +
+              ' local-repo/cloudstream-api to fall back to the unpinned download.'
+    }
+
+    $actualHash = Get-Sha256 $jar
+    $actualSize = (Get-Item -LiteralPath $jar).Length
+    if ($actualHash -ne ([string]$lock.sha256).ToLowerInvariant()) {
+        throw "Pinned CloudStream API jar does not match tools/cloudstream-api.lock.json.`n" +
+              "  expected sha256 $($lock.sha256)`n" +
+              "  actual   sha256 $actualHash`n" +
+              'This is what causes phantom plugin updates. Either restore the pinned jar' +
+              ' or update the lock file deliberately (and bump module versions).'
+    }
+    if ($null -ne $lock.size -and $actualSize -ne [int64]$lock.size) {
+        throw "Pinned CloudStream API jar size mismatch: expected $($lock.size), got $actualSize"
+    }
+
+    Write-Host "==> CloudStream API pinned: $([string]$lock.apiVersionName) (sha256 $($actualHash.Substring(0,12)))"
+    return $true
+}
+
 # ---------------------------------------------------------------- 1. build
 if (-not $SkipBuild) {
+    $null = Test-CloudstreamApiPin -Root $root
     $isWindowsHost = ($env:OS -eq 'Windows_NT')
     $gradlew = if ($isWindowsHost) { Join-Path $root 'gradlew.bat' } else { Join-Path $root 'gradlew' }
     if (-not (Test-Path $gradlew)) { throw "Gradle wrapper not found: $gradlew" }
@@ -168,10 +331,10 @@ foreach ($dir in Get-ChildItem $root -Directory) {
 Write-Host "==> Copied $copied freshly built package(s) into builds/"
 
 # ------------------------------- 2b. reproducibility / drift report
-# The .cs3 packaging itself IS deterministic (entry timestamps are pinned and a
-# rebuild from unchanged sources produces byte-identical output). The usual
-# cause of a changed hash is therefore the floating CloudStream API dependency
-# ("pre-release"), which alters the debug metadata embedded in classes.dex.
+# The .cs3 packaging is deterministic (entry timestamps are pinned) and the
+# CloudStream API jar is now vendored + verified, so rebuilding unchanged source
+# MUST reproduce byte-identical output. A changed hash therefore means source
+# really did change, or the API jar pin moved - it is no longer routine.
 # Surfacing which plugins changed - and whether their declared version was
 # bumped - makes that visible instead of silently shipping 36 re-downloads.
 $changedWithoutVersionBump = @()
@@ -202,7 +365,7 @@ if ($changedWithoutVersionBump.Count -gt 0) {
     Write-Host ''
     Write-Warning "==> $($changedWithoutVersionBump.Count) plugin(s) produced a different binary. CloudStream re-downloads a plugin whenever its fileHash changes, so bump 'version' in the module's build.gradle.kts if the change is intentional:"
     $changedWithoutVersionBump | Format-Table -AutoSize | Out-String | Write-Host
-    Write-Warning '   If no source was edited, the cause is usually the floating cloudstream3:pre-release dependency.'
+    Write-Warning '   Rebuilds are reproducible: if you edited no source and no version changed, the API jar pin in tools/cloudstream-api.lock.json was altered.'
 }
 
 # ------------------------------------------------------- 3. load metadata
@@ -294,5 +457,15 @@ $normalized | Select-Object name, version, status, language | Format-Table -Auto
 
 if ($repoBase -like '*YOUR_GITHUB_USERNAME*') {
     Write-Warning 'repo-config.json still contains the YOUR_GITHUB_USERNAME placeholder - edit tools/repo-config.json before publishing.'
+}
+
+# ------------------------------------------------------ 7. upstream liveness
+# Runs last so it never blocks metadata assembly: we always want a valid,
+# hash-consistent plugins.json even when a third-party site is down.
+if ($SkipHealthCheck) {
+    Write-Host ''
+    Write-Host '==> Upstream health check skipped (-SkipHealthCheck)'
+} else {
+    $null = Test-UpstreamHealth -ConfigPath (Join-Path $toolsDir 'domain-health.json') -FailOnUnhealthy:$FailOnUnhealthy
 }
 

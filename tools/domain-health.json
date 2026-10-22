@@ -1,0 +1,66 @@
+{
+  "_comment": [
+    "Liveness probes for the upstream sites these plugins depend on.",
+    "Run automatically at the end of tools/build-repo.ps1 so domain rot is",
+    "caught at build time instead of by users.",
+    "",
+    "Why body checks matter: these sites answer an app-gate page with HTTP 200,",
+    "so a status-only check would report a dead provider as healthy. Assert on the",
+    "body instead.",
+    "",
+    "Fields per check:",
+    "  name        - label shown in the report",
+    "  url         - absolute URL to probe",
+    "  status      - expected HTTP status (default 200)",
+    "  contains    - substring(s) the body MUST contain",
+    "  notContains - substring(s) the body must NOT contain (e.g. gate pages)",
+    "  timeoutSec  - per-request timeout",
+    "",
+    "Add an entry whenever a provider changes its upstream domain."
+  ],
+  "timeoutSeconds": 20,
+  "userAgent": "CloudStreamRepo-build-healthcheck/1.0 (+https://github.com/yonkou0/CloudStreamRepo)",
+  "checks": [
+    {
+      "name": "OttSource / main search API",
+      "url": "https://net52.cc/mobile/search.php?s=ironman",
+      "status": 200,
+      "contains": ["\"status\""],
+      "notContains": ["Site Direct Access Not Allowed", "Page Not Found"]
+    },
+    {
+      "name": "OttSource / main detail API",
+      "url": "https://net52.cc/mobile/post.php?id=1",
+      "status": 200,
+      "contains": ["status"],
+      "notContains": ["Site Direct Access Not Allowed", "Page Not Found"]
+    },
+    {
+      "name": "OttSource / PrimeVideo search API",
+      "url": "https://net52.cc/mobile/pv/search.php?s=ironman",
+      "status": 200,
+      "_note": "PV omits the status key when there are no results, so assert on the JSON envelope instead.",
+      "contains": ["searchResult"],
+      "notContains": ["Site Direct Access Not Allowed"]
+    },
+    {
+      "name": "OttSource / Hotstar search API",
+      "url": "https://net52.cc/mobile/hs/search.php?s=ironman",
+      "status": 200,
+      "contains": ["status"],
+      "notContains": ["Site Direct Access Not Allowed"]
+    },
+    {
+      "name": "OttSource / playlist API",
+      "url": "https://net52.cc/mobile/playlist.php?id=82034837",
+      "status": 200,
+      "notContains": ["Site Direct Access Not Allowed", "Page Not Found"]
+    },
+    {
+      "name": "OttSource / ad-bypass host",
+      "url": "https://userver.net52.cc/?hee5=healthcheck",
+      "status": 200,
+      "_note": "Must resolve. net77.cc has no userver.* DNS record."
+    }
+  ]
+}

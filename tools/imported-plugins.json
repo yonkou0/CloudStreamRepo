@@ -68,7 +68,7 @@
     {
         "url":  "https://raw.githubusercontent.com/Faisal0786/TestPlugins-old/builds/OttSource.cs3",
         "status":  1,
-        "version":  5,
+        "version":  6,
         "name":  "OttSource",
         "internalName":  "OttSource",
         "authors":  [
@@ -84,7 +84,7 @@
                     ],
         "iconUrl":  "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/CNC%20Verse/icon.png",
         "apiVersion":  1,
-        "fileHash":  "sha256-c0f23c69c89d8a3a5103b8e14add5c51f8db3e57237e0ca40051641c890df6da"
+        "fileHash":  "sha256-8764cba18efd50984c9f5773e96b40098bdab612d53e149f1c0a1e59f8b2d0e2"
     },
     {
         "url":  "https://raw.githubusercontent.com/Faisal0786/TestPlugins-old/builds/SDmovies.cs3",

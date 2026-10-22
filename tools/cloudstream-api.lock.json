@@ -1,0 +1,8 @@
+{
+  "comment": "Pinned CloudStream API jar. The gradle plugin otherwise downloads the MOVING 'pre-release' GitHub release asset, so identical source produces different classes.dex bytes on every build and CloudStream re-downloads all plugins. build-repo.ps1 verifies the vendored jar against this lock and fails on mismatch.",
+  "vendorPath": "local-repo/cloudstream-api/pre-release/classes.jar",
+  "sourceUrl": "https://github.com/recloudstream/cloudstream/releases/download/pre-release/classes.jar",
+  "apiVersionName": "4.7.0-PRE",
+  "size": 7030304,
+  "sha256": "4abf03265aac9fcb5c2e7ddfa2bb4bd663bfd0e0ab1c5421402a2e33d093763c"
+}
